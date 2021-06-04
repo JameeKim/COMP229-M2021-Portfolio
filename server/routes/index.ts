@@ -6,17 +6,17 @@ export default router;
 const navBarLinks = [
   {
     url: "/",
-    title: "Home",
+    title: "",
     id: "home",
   },
   {
     url: "/about",
-    title: "About Me",
+    title: "About",
     id: "about",
   },
   {
     url: "/projects",
-    title: "My Projects",
+    title: "Projects",
     id: "projects",
   },
   {
@@ -26,7 +26,7 @@ const navBarLinks = [
   },
   {
     url: "/contact",
-    title: "Contact Me",
+    title: "Contact",
     id: "contact",
   },
 ];

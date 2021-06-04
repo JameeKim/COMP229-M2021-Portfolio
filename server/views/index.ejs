@@ -12,9 +12,20 @@
   <link rel="stylesheet" href="/styles/app.css">
 </head>
 
-<body>
-  <h1><%= title %></h1>
-  <p>Welcome to <%= title %></p>
+<body class="bg-light">
+  <header>
+    <%- include("components/header"); %>
+  </header>
+
+  <main>
+    <div class="container-md">
+      <%- include("content/" + page) %>
+    </div>
+  </main>
+
+  <footer>
+    <%- include("components/footer"); %>
+  </footer>
 
   <!-- Scripts -->
   <script src="/bootstrap/dist/js/bootstrap.min.js"></script>

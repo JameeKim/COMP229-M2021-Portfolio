@@ -1,3 +1,12 @@
+/**
+ * server/config/app.ts
+ *
+ * Express server setup
+ *
+ * Dohyun Kim 301058465
+ * Jun. 4, 2021
+ */
+
 import createError, { HttpError } from "http-errors";
 import express, { Request, Response, NextFunction } from "express";
 import path from "path";
@@ -13,13 +22,17 @@ export default app;
 app.set("views", path.join(__dirname, "../views"));
 app.set("view engine", "ejs");
 
+// server middlewares
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+// static files folders
 app.use(express.static(path.join(__dirname, "../../client")));
 app.use(express.static(path.join(__dirname, "../../node_modules")));
 
+// routes setup
 app.use("/", indexRouter);
 
 // catch 404 and forward to error handler

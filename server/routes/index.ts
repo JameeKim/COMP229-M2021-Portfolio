@@ -1,8 +1,20 @@
+/**
+ * server/routes/index.ts
+ *
+ * Root-level routes setup
+ *
+ * Dohyun Kim 301058465
+ * Jun. 4, 2021
+ */
+
 import express from "express";
 
 const router = express.Router();
 export default router;
 
+/**
+ * List of static pages that go into the navigation bar
+ */
 const navBarLinks = [
   {
     url: "/",
@@ -31,6 +43,9 @@ const navBarLinks = [
   },
 ];
 
+/**
+ * Projects to show in the projects page
+ */
 // TODO move to the database
 const projects = {
   games: [
@@ -109,22 +124,31 @@ const projects = {
   ]
 };
 
+/**
+ * Route set-ups
+ */
+
+// home page
 router.get("/", (req, res, next) => {
   res.render("index", { title: "", page: "home", navBarLinks });
 });
 
+// about page
 router.get("/about", (req, res, next) => {
   res.render("index", { title: "About Us", page: "about", navBarLinks });
 });
 
+// projects page
 router.get("/projects", (req, res, next) => {
   res.render("index", { title: "Projects", page: "projects", navBarLinks, projects });
 });
 
+// services page
 router.get("/services", (req, res, next) => {
   res.render("index", { title: "Services", page: "services", navBarLinks });
 });
 
+// contact page
 router.get("/contact", (req, res, next) => {
   res.render("index", { title: "Contact Us", page: "contact", navBarLinks });
 });

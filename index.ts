@@ -1,7 +1,17 @@
+/**
+ * index.ts
+ *
+ * Entry point for the server-side
+ *
+ * Dohyun Kim 301058465
+ * Jun. 4, 2021
+ */
+
 import createError from "http-errors";
-import app from "./server/config/app";
 import debug from "debug";
 import http from "http";
+
+import app from "./server/config/app";
 
 debug("portfolio:server");
 

@@ -118,13 +118,13 @@ router.get("/about", (req, res, next) => {
 });
 
 router.get("/projects", (req, res, next) => {
-  res.render("index", { title: "", page: "projects", navBarLinks, projects });
+  res.render("index", { title: "Projects", page: "projects", navBarLinks, projects });
 });
 
 router.get("/services", (req, res, next) => {
-  res.render("index", { title: "", page: "services", navBarLinks });
+  res.render("index", { title: "Services", page: "services", navBarLinks });
 });
 
 router.get("/contact", (req, res, next) => {
-  res.render("index", { title: "", page: "contact", navBarLinks });
+  res.render("index", { title: "Contact Us", page: "contact", navBarLinks });
 });

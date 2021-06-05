@@ -152,3 +152,8 @@ router.get("/services", (req, res, next) => {
 router.get("/contact", (req, res, next) => {
   res.render("index", { title: "Contact Us", page: "contact", navBarLinks });
 });
+
+// temporary response for contact page form submission
+router.post("/contact", (req, res, next) => {
+  res.redirect("/", 303);
+});

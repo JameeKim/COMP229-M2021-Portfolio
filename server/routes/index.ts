@@ -67,7 +67,7 @@ const projects = {
     },
     {
       name: "Time Is Precious",
-      collaborationType: "Participated",
+      collaborationType: "Participated by Dohyun Kim",
       description: [
         "A collaboration work for Centennial College assignment.",
         "2d platformer pixel game with action and puzzles.",
@@ -87,7 +87,7 @@ const projects = {
     },
     {
       name: "The Outer Space: The Astronaut",
-      collaborationType: "Participated",
+      collaborationType: "Participated by Dohyun Kim",
       description: [
         "A collaboration work for Centennial College assignment.",
         "2d top-down game with monologs, story, and puzzles.",
